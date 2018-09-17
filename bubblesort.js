@@ -1,3 +1,8 @@
+function swapper (val, comparator) {
+  if (val > comparator) return true;
+  return false
+}
+
 function bubbleSort(array) {
   let totalLoops = array.length - 1;
   while (totalLoops > 0) {
@@ -5,7 +10,7 @@ function bubbleSort(array) {
       let currIdx = array[i];
       let nextIdx = array[i + 1];
 
-      if (currIdx > nextIdx) {
+      if (swapper(currIdx, nextIdx)) {
 
         array[i] = nextIdx;
         array[i + 1] = currIdx;

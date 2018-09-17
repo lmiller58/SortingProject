@@ -1,13 +1,12 @@
-beforeAll(function () {
-  spyOn(bubbleSort, array).and.callThrough(); // replace existing `tootsiepop['lick']` method
-});
-it('getting to the center of tootsiepop involves exactly three licks', function () {
-  tootsiepop.getToCenter();
-  expect(tootsiepop.lick.calls.count()).toEqual(3);
-});
-
 describe('Bubble Sort', function(){
   it('handles an empty array', function(){
     expect( bubbleSort([]) ).toEqual( [] );
   });
+
+it('Compares values the correct number of times', function () {
+  spyOn(window, 'swapper').and.callThrough();
+  window.bubbleSort([3,2,4]);
+  expect(window.swapper.calls.count()).toEqual(3);
 });
+});
+
